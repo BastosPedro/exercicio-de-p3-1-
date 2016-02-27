@@ -1,3 +1,4 @@
+package stdpack;
 import java.util.Scanner;
 
 public class user {
@@ -5,13 +6,11 @@ public class user {
 	private String name;
 	private String email;
 
-	public user(){
-		Scanner scanner = new Scanner(System.in);
+	public user(Scanner aux){
 		System.out.println("enter name:");
-		setName(scanner.nextLine());
+		setName(aux.nextLine());
 		System.out.println("enter email:");
-		setEmail(scanner.nextLine());
-		scanner.close();
+		setEmail(aux.nextLine());
 	}
 //getters
 	public String getName(){

@@ -1,13 +1,12 @@
+package stdpack;
 import java.util.Scanner;
 
 public class resource {
 	private String resourceID;
 	
-	public resource(){
-		Scanner aux = new Scanner(System.in);
+	public resource(Scanner aux){
 		System.out.println("enter the room name");
 		setResourceID(aux.nextLine());
-		aux.close();
 	}
 //getters
 	public String getResourceID(){

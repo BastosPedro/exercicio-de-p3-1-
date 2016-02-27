@@ -1,4 +1,5 @@
-import java.util.Calendar;
+package stdpack;
+import stdpack.auxiliary;
 import java.util.Date;
 
 public class operation {
@@ -7,19 +8,13 @@ public class operation {
 	private Date dateBegin;
 	private Date dateEnd;
 	
-	public operation(user newUser, resource newResource, int days){
+	public operation(user newUser,resource newResource, int days){
 		setUser(newUser);
 		setResource(newResource);
 		dateBegin = new Date();
-		dateEnd = addDays(dateBegin, days);
+		dateEnd = auxiliary.addDays(dateBegin, days);
 	}
-	
-	public static Date addDays(final Date date, int days){
-		Calendar aux = Calendar.getInstance();
-		aux.setTime(date);
-		aux.add(Calendar.DATE, days);
-		return aux.getTime();
-	}
+		
 	//getters
 	public user getUser(){
 		return this.User;
@@ -40,7 +35,4 @@ public class operation {
 	public void setResource(resource input){
 		this.Resource = input;
 	}
-	
-	
-
 }
