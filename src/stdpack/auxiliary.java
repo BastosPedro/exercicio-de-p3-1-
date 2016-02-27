@@ -1,4 +1,5 @@
 package stdpack;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -9,5 +10,15 @@ public class auxiliary {
 		aux.setTime(date);
 		aux.add(Calendar.DATE, days);
 		return aux.getTime();
+	}
+	public static void printAll(ArrayList<operation> list){
+		for(int i = 0; i < list.size(); i++){
+			System.out.print("\nAllocation #" + (i+1) + "\n" +
+							 list.get(i).getResource().getResourceID() +"\n" +
+							 list.get(i).getUser().getName() +"\n" +
+							 list.get(i).getUser().getEmail()+"\n" +
+							 list.get(i).getBegin()+"\n" + 
+							 list.get(i).getEnd());
+		}
 	}
 }
