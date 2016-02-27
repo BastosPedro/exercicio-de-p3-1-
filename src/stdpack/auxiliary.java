@@ -21,4 +21,15 @@ public class auxiliary {
 							 list.get(i).getEnd());
 		}
 	}
+	public static boolean login(String nick, String pass, ArrayList<user> list){
+		int aux = list.size();
+		for(int i = 0; i < aux; i++){
+			if(list.get(i).getNickName().equals(nick) 
+			   && list.get(i).getPassword().equals(pass)){
+				return true;
+			}
+			else return false;
+			
+		}return false;
+	}
 }
