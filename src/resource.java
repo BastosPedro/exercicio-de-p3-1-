@@ -1,29 +1,21 @@
-import java.util.Date;
+import java.util.Scanner;
 
 public class resource {
 	private String resourceID;
-	private Date dateBegin;
-	private Date dateEnd;
-	private user responsible;
-
-//getters	
+	
+	public resource(){
+		Scanner aux = new Scanner(System.in);
+		System.out.println("enter the room name");
+		setResourceID(aux.nextLine());
+		aux.close();
+	}
+//getters
 	public String getResourceID(){
 		return this.resourceID;
 	}
-	public Date getBegin(){
-		return this.dateBegin;
-	}
-	public Date getEnd(){
-		return this.dateEnd;
-	}
+	
 //setters	
 	public void setResourceID(String name){
 		this.resourceID = name;
-	}
-	public void setBegin(Date date){
-		this.dateBegin = date;
-	}
-	public void setEnd(Date date){
-		this.dateEnd = date;
 	}
 }
